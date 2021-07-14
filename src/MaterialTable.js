@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MaterialTable(props) {
-  const { rows } = props;
+  const { rows, headCells } = props;
   const classes = useStyles();
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
@@ -85,6 +85,7 @@ export default function MaterialTable(props) {
               orderBy={orderBy}
               onRequestSort={handleRequestSort}
               rowCount={rows.length}
+              headCells
             />
             <TableBody>
               {stableSort(rows, getComparator(order, orderBy))
