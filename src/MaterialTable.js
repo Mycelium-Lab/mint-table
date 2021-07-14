@@ -101,8 +101,8 @@ export default function MaterialTable(props) {
                       <TableCell component="th" id={labelId} scope="row" padding="none">
                         {row.id}
                       </TableCell>
-                      <TableCell align="center">{row.to}</TableCell>
-                      <TableCell align="center">{row.amountUSD}</TableCell>
+                      <TableCell align="center"><a href={'https://etherscan.io/address/'+row.to}>{row.to}</a></TableCell>
+                      <TableCell align="center">{row.amountUSD.toString().split('.')[0]}</TableCell>
                     </TableRow>
                   );
                 })}
