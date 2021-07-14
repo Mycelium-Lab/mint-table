@@ -19,42 +19,25 @@ const Mint = gql`
   }
 `;
 
-const LiqProv = gql`
-  query GetMint {
-    mints(where: {amountUSD_gt: "1000000", timestamp_gt: "1618335878"}, orderBy: to, orderDirection: desc) {
-      to
-      amountUSD
-    }
-  }
-`;
-
-const headCells_mint = [
-  { id: 'name', numeric: false, disablePadding: true, label: 'ID' },
-  { id: 'LiqProv', numeric: true, disablePadding: false, label: 'Liquidity provider' },
-  { id: 'amountUSD', numeric: true, disablePadding: false, label: 'Amount (USD)' },
-];
-
-const headCells_prov = [
-  { id: 'LiqProv', numeric: true, disablePadding: false, label: 'Liquidity provider' },
-  { id: 'amountUSD', numeric: true, disablePadding: false, label: 'Amount (USD)' },
+const headCells = [
+  { id: 'id', numeric: false, disablePadding: true, label: 'ID' },
+  { id: 'to', numeric: true, disablePadding: false, label: 'Liquidity provider' },
+  { id: 'amount', numeric: true, disablePadding: false, label: 'Amount (USD)' },
 ];
 
 
 function App() {
-  const { loading_mint, error_mint, data_mint } = useQuery(Mint);
+  const { loading, error, data } = useQuery(Mint);
 
-
-  if (loading_mint) return <p>Loading...</p>;
-  if (error_mint) return <p>Error :(</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
 
   return (
     <div>
     
-    <MaterialTable rows = {data_mint.mints} headCells = {headCells_mint}>
+    <MaterialTable rows = {data.mints} headCells = {headCells}>
     </MaterialTable>
 
-    <MaterialTable rows = {data_prov.mints} headCells = {headCells_prov}>
-    </MaterialTable>
     </div>
   );
 }
