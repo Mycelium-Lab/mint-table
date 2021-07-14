@@ -47,11 +47,6 @@ function App() {
   if (loading_mint) return <p>Loading...</p>;
   if (error_mint) return <p>Error :(</p>;
 
-  const { loading, error, data_prov } = useQuery(LiqProv);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
-
   return (
     <div>
     
