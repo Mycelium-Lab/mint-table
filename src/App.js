@@ -41,11 +41,11 @@ const headCells_prov = [
 
 
 function App() {
-  const { loading, error, data_mint } = useQuery(Mint);
+  const { loading_mint, error_mint, data_mint } = useQuery(Mint);
 
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading_mint) return <p>Loading...</p>;
+  if (error_mint) return <p>Error :(</p>;
 
   const { loading, error, data_prov } = useQuery(LiqProv);
 
