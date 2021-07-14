@@ -14,6 +14,6 @@ Uniswap v2
 ![Somth went wrong](/img/demo.png)
 
 ## Todo list
-- Let Apollo make big graphQL queries (more than 100 entities) 
-- Fix sorting
-- Delete duplicates
+- [x] Let Apollo make big graphQL queries (more than 100 entities) 
+- [ ] Fix sorting
+- [ ] Delete duplicates
