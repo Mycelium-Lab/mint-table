@@ -1,0 +1,1094 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"th",
+				"threading"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"de",
+				"decimalsUSDC"
+			],
+			[
+				"tok",
+				"tokenUSDC"
+			],
+			[
+				"dec",
+				"decimalsUSDC"
+			],
+			[
+				"bal",
+				"balanceDAI"
+			],
+			[
+				"AD",
+				"ADDRESS_INFO"
+			],
+			[
+				"b",
+				"balance"
+			],
+			[
+				"pr",
+				"priceETH"
+			],
+			[
+				"ba",
+				"balanceETH"
+			],
+			[
+				"pric",
+				"priceUSDC"
+			],
+			[
+				"bl",
+				"balanceUSDC"
+			],
+			[
+				"toke",
+				"tokenDAI"
+			],
+			[
+				"token",
+				"tokenUSDT"
+			],
+			[
+				"a",
+				"accounts"
+			],
+			[
+				"US",
+				"USDC"
+			],
+			[
+				"r",
+				"route"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"to",
+				"tokenAddress"
+			],
+			[
+				"min",
+				"minABI"
+			],
+			[
+				"connec",
+				"connectButton"
+			],
+			[
+				"routi",
+				"routingParameters"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"fea",
+				"featureMarker"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"geo",
+				"geocode2"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"layer_",
+				"layer_ground"
+			],
+			[
+				"im",
+				"image"
+			],
+			[
+				"ti",
+				"tilemap"
+			],
+			[
+				"e",
+				"except"
+			],
+			[
+				"te",
+				"test_file"
+			],
+			[
+				"c",
+				"content"
+			],
+			[
+				"p",
+				"print"
+			],
+			[
+				"se",
+				"send_file"
+			],
+			[
+				"loca",
+				"local_media"
+			],
+			[
+				"on",
+				"onicecandidate"
+			],
+			[
+				"Cre",
+				"createServer"
+			],
+			[
+				"loc",
+				"local_media"
+			],
+			[
+				"pee",
+				"peer_connection"
+			],
+			[
+				"local",
+				"local_media_stream"
+			],
+			[
+				"reci",
+				"receive_message"
+			],
+			[
+				"ma",
+				"main_menu"
+			],
+			[
+				"rec",
+				"recipient_id"
+			],
+			[
+				"user",
+				"user_agent"
+			],
+			[
+				"li",
+				"list_auditioned"
+			],
+			[
+				"lis",
+				"list_obeys"
+			],
+			[
+				"us",
+				"user_obeys"
+			],
+			[
+				"Cu",
+				"currentPage"
+			],
+			[
+				"I",
+				"IPINFO_TOKEN"
+			],
+			[
+				"cli",
+				"client_ip"
+			],
+			[
+				"Use",
+				"UserIP"
+			],
+			[
+				"w",
+				"wb_obj"
+			],
+			[
+				"file",
+				"file_size"
+			],
+			[
+				"rss",
+				"rss_users"
+			],
+			[
+				"Ac",
+				"activeID"
+			],
+			[
+				"ac",
+				"activeID"
+			],
+			[
+				"tr",
+				"try\tTry/Except/Else"
+			],
+			[
+				"fil",
+				"file_size"
+			],
+			[
+				"ra",
+				"range_end"
+			],
+			[
+				"la",
+				"lastPlayableContent"
+			],
+			[
+				"ran",
+				"range_start"
+			],
+			[
+				"fi",
+				"file_size"
+			],
+			[
+				"pa",
+				"path_params"
+			],
+			[
+				"me",
+				"meta"
+			],
+			[
+				"au",
+				"audioSource"
+			],
+			[
+				"onc",
+				"onclick\tAttr"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"song",
+				"songPath"
+			],
+			[
+				"er",
+				"errormsg"
+			],
+			[
+				"pad",
+				"padding-bottom\tproperty"
+			],
+			[
+				"player",
+				"player-microtitle"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fo",
+				"footer-link"
+			],
+			[
+				"first_",
+				"first_full_registered"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"su",
+				"subscription"
+			],
+			[
+				"sta",
+				"status"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"is",
+				"is_approved"
+			],
+			[
+				"ls",
+				"lastPlayedId"
+			],
+			[
+				"pla",
+				"player-play"
+			],
+			[
+				"l",
+				"lis"
+			],
+			[
+				"x",
+				"xrow"
+			],
+			[
+				"over",
+				"overflow-x\tproperty"
+			],
+			[
+				"max",
+				"max-height\tproperty"
+			],
+			[
+				"co",
+				"content_1"
+			],
+			[
+				"coo",
+				"cookies"
+			],
+			[
+				"cu",
+				"currentPage"
+			],
+			[
+				"setC",
+				"setContentOnly"
+			],
+			[
+				"use",
+				"user_auditioned"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"CO",
+				"ContentCard"
+			],
+			[
+				"bo",
+				"body"
+			],
+			[
+				"send",
+				"send_rss"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/index.js",
+			"settings":
+			{
+				"buffer_size": 806,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAJwAAAAAAAAAnQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnAAAAAAAAACcAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"paste",
+					null,
+					"AQAAAJ0AAAAAAAAAAwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnQAAAAAAAACdAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAAMBAAAAAAAABAEAAAAAAAAAAAAABAEAAAAAAAAFAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAwEAAAAAAAADAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"paste",
+					null,
+					"AQAAAAUBAAAAAAAAeAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABQEAAAAAAAAFAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					26,
+					1,
+					"left_delete",
+					null,
+					"AQAAAC8BAAAAAAAALwEAAAAAAAAlAAAAaHR0cHM6Ly80OHAxcjJyb3o0LnNzZS5jb2Rlc2FuZGJveC5pbw",
+					"AQAAAAAAAAABAAAALwEAAAAAAABUAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"paste",
+					null,
+					"AQAAAC8BAAAAAAAAkwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"paste",
+					null,
+					"AgAAAFABAAAAAAAAcAEAAAAAAAAAAAAAcAEAAAAAAABwAQAAAAAAAAkAAABbYXBpLWtleV0",
+					"AQAAAAAAAAABAAAAUAEAAAAAAABZAQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "/C/Users/Эмиль/AppData/Roaming/Sublime Text 3/Packages/User/npm.sublime-build",
+			"settings":
+			{
+				"buffer_size": 30,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "untitled.sublime-build"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{\n\t\"shell_cmd\": \"${0:make}\"\n}\n"
+					},
+					"AQAAAAAAAAAAAAAAGQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2,
+					1,
+					"insert",
+					{
+						"characters": "npm"
+					},
+					"BAAAABEAAAAAAAAAEgAAAAAAAAAAAAAAEgAAAAAAAAASAAAAAAAAAAQAAABtYWtlEgAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABQAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEQAAAAAAAAAVAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": " start"
+					},
+					"BgAAABQAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAWAAAAAAAAAAAAAAAWAAAAAAAAABcAAAAAAAAAAAAAABcAAAAAAAAAGAAAAAAAAAAAAAAAGAAAAAAAAAAZAAAAAAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFAAAAAAAAAAUAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"be",
+				"HTMLBeautify"
+			],
+			[
+				"js",
+				"Javascript Beautify"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"bea",
+				"HTMLBeautify"
+			],
+			[
+				"beau",
+				"HTMLBeautify"
+			],
+			[
+				"ht",
+				"HTMLBeautify"
+			],
+			[
+				"h",
+				"HTMLBeautify"
+			],
+			[
+				"H",
+				"HTMLBeautify"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/?wsl$/Ubuntu-18.04/home/soulport/static",
+		"/?wsl$/Ubuntu-18.04/home/soulport/static/fnt",
+		"/?wsl$/Ubuntu-18.04/home/soulport/static/js"
+	],
+	"file_history":
+	[
+		"/D/projects/fast timer/style.css",
+		"/D/projects/fast timer/FKS.py",
+		"/D/projects/fast timer/main.js",
+		"/D/projects/fast timer/index.html",
+		"/D/projects/lec2text.py",
+		"/D/projects/zettelkasten/super-charts/src/App.js",
+		"/D/projects/zettelkasten/app.py",
+		"/D/hackathon/ssh/index.html",
+		"/D/hackathon/ssh/ssh_web.py",
+		"/D/hackathon/ssh/webssh/webssh/static/js/main.js",
+		"/D/hackathon/ssh/serv.js",
+		"/C/Users/Эмиль/AppData/Local/Temp/Rar$DIa7964.14026/ReadMe.txt",
+		"/?wsl$/Ubuntu-20.04/etc/apache2/sites-available/000-default.conf",
+		"/D/projects/zettelkasten/super-charts/public/index.html",
+		"/D/projects/zettelkasten/index.html",
+		"/D/projects/module.html",
+		"/D/hackathon/defiHack/simpleDB.py",
+		"/D/hackathon/ssh/webssh/webssh/templates/index.html",
+		"/D/hackathon/ssh/webssh/run.py",
+		"/D/hackathon/VNC/app.py",
+		"/C/Python27/rdp/rdp_server.py",
+		"/D/hackathon/redos_rdp_server/java.py",
+		"/D/hackathon/redos_rdp_server/stream.py",
+		"/D/hackathon/redos_rdp_server/serv.py",
+		"/D/hackathon/rdp/rdp_client.py",
+		"/D/hackathon/rdp/rdp_server.py",
+		"/D/hackathon/redos/pserver.py",
+		"/D/hackathon/redos_rdp_server/sio.py",
+		"/D/hackathon/redos_rdp_server/sockets.py",
+		"/D/hackathon/VNC/server.py",
+		"/D/mycelium/client/justTask/src/Utils.js",
+		"/D/hackathon/redos_rdp_server/client.py",
+		"/D/hackathon/redos_rdp_server/mitm.py",
+		"/D/hackathon/redos_rdp_server/pymitm.py",
+		"/D/hackathon/redos_rdp_server/pyclient.py",
+		"/D/hackathon/redos_rdp_server/pystream.py",
+		"/D/hackathon/video-streamer/cv/app.py",
+		"/D/hackathon/VNC/vnc.py",
+		"/C/Users/Эмиль/Downloads/remote_desktop-master/Server/src/ir/ashkanabd/Main.java",
+		"/D/hackathon/VNC/sockets.py",
+		"/D/hackathon/redos_rdp_server/java.txt",
+		"/D/hackathon/VNC/sio.py",
+		"/D/projects/zettelkasten/server.py",
+		"/D/mycelium/client/zett.txt",
+		"/D/mycelium/client/justTask/package.json",
+		"/D/mycelium/client/justTask/src/App.js",
+		"/D/projects/zettelkasten/simlpleDB.py",
+		"/D/hackathon/defiHack/simlpleDB.py",
+		"/C/Users/Эмиль/Downloads/sol1 (3).sol",
+		"/D/projects/conference/conf_bot/conf_bot.py",
+		"/D/projects/my_corp_bot/MY_CORP_BOT.py",
+		"/D/src/html/index.html",
+		"/D/mycelium/client/justTask/package-lock.json",
+		"/D/mycelium/client/justTask/public/manifest.json",
+		"/D/mycelium/client/justTask/src/index.js",
+		"/D/mycelium/index.html",
+		"/D/hackathon/defiHack/server.py",
+		"/C/Users/Эмиль/Downloads/sol1 (2).sol",
+		"/D/hackathon/defiHack/franch.py",
+		"/D/hackathon/defiHack/some.py",
+		"/D/hackathon/defiHack/App.js",
+		"/D/mycelium/mycelium/src/Utils.js",
+		"/C/Users/Эмиль/Downloads/sol1 (1).sol",
+		"/D/hackathon/defiHack/script.py",
+		"/D/projects/my_corp_bot/utils/simlpleDB.py",
+		"/D/projects/my_corp_bot/app.py",
+		"/D/projects/chas server/fond_bot/server.py",
+		"/D/projects/chas server/fond_bot/app.py",
+		"/D/projects/chas server/chastushki-bot-vk/server.py",
+		"/D/hackathon/fc.sol",
+		"/D/hackathon/test_app/src/App.js",
+		"/D/hackathon/test_app/package.json",
+		"/D/mycelium/mycelium/src2/App.js",
+		"/D/mycelium/client/.gitignore",
+		"/D/mycelium/test.html",
+		"/D/mycelium/client/src/getWeb3.js",
+		"/D/mycelium/utils.js",
+		"/D/mycelium/client/src/App.test.js",
+		"/D/mycelium/mycelium/src/App.js",
+		"/D/mycelium/metamask.js",
+		"/D/mycelium/client/src/index.js",
+		"/D/hackathon/temp.html",
+		"/D/mycelium/client/src/App.js",
+		"/D/mycelium/contracts/SimpleStorage.sol",
+		"/D/mycelium/web3.min.js",
+		"/D/hackathon/test/temp.html",
+		"/D/hackathon/test/main.js",
+		"/D/mycelium/client/src/serviceWorker.js",
+		"/D/mycelium/client/package.json",
+		"/D/mycelium/mycelium/src/index.js",
+		"/D/game/server.py",
+		"/D/game/script.js",
+		"/D/game/index.html",
+		"/D/newGame/static/js/main.js",
+		"/D/newGame/index.html",
+		"/D/newGame/index.js",
+		"/D/newGame/ultra.json",
+		"/D/newGame/tilemap.js",
+		"/D/hackathon/main.js",
+		"/D/hackathon/project.py",
+		"/D/hackathon/models.py",
+		"/D/hackathon/test/Vildanov.py",
+		"/D/hackathon/test/manifest.json",
+		"/D/projects/chas server/chastushki-bot-vk/example.py",
+		"/D/projects/chas server/app.py",
+		"/D/projects/chas server/serc/app.py",
+		"/D/projects/chas server/fg/q.py",
+		"/D/projects/chas server/haclever_VK-api/example.py",
+		"/D/hackathon/Main.py",
+		"/D/progressive-web-app/pages/index.js",
+		"/D/splitter.py",
+		"/D/redacted.txt",
+		"/D/liker.py",
+		"/D/like.txt",
+		"/C/Users/Эмиль/Downloads/Telegram Desktop/500chats.txt",
+		"/D/progressive-web-app/next.config.js",
+		"/D/newGame/phaser/phaser.min.js",
+		"/D/newGame/tilemap.json",
+		"/D/newGame/tilemap.tmx",
+		"/C/coffee/data.py",
+		"/C/Users/Эмиль/Downloads/phaser.min.js",
+		"/C/Users/Эмиль/Downloads/One1.py",
+		"/C/Users/Эмиль/travel.py",
+		"/C/Users/Эмиль/Downloads/wtAVH6ClQx4.txt",
+		"/C/coffee/p2.py",
+		"/D/projects/chas server/chastushki-bot-vk/voice.py",
+		"/C/Users/Эмиль/AppData/Local/Temp/fz3temp-2/server.py",
+		"/D/Sublime Text 3/pruffer.py"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 116.0,
+		"where_history":
+		[
+			"\\\\wsl$\\Ubuntu-18.04\\home\\soulport\\static\\files"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"chartdiv",
+			"port",
+			"edgeiq",
+			"btn",
+			"#cc0052",
+			"const ",
+			"connect_to_socket",
+			"right",
+			"chain",
+			"WETH",
+			"Web3",
+			"props",
+			"initi",
+			"debugger",
+			"onSu",
+			"addLocationsToPanel",
+			"panel",
+			"api",
+			"platform",
+			"print",
+			"\"url\"",
+			"url",
+			"local",
+			"var local_media",
+			"remote_media",
+			"logs",
+			"config",
+			"var config",
+			"config",
+			"SIGNALING_SERVER",
+			"verify_fb_token",
+			"arfs",
+			"verify_fb_token",
+			"attach",
+			"wss",
+			".addStream",
+			"ICE_SERVERS",
+			"'url'",
+			"'urls'",
+			"'url'",
+			"getUser",
+			"remote_media",
+			"peer_id",
+			"peer_media_elements",
+			"socket.io",
+			"https",
+			"8443",
+			"что почитать",
+			".display",
+			"pause",
+			"player-close",
+			"player-for",
+			"player-btn",
+			"play-btn",
+			"player-btn",
+			"pwd",
+			"put",
+			".create",
+			"print",
+			"зкште",
+			".get_json",
+			".get_\\json",
+			".get_json",
+			"app",
+			"requests.",
+			"request.",
+			"verify_fb_token",
+			"request.",
+			"handle",
+			"requests",
+			"await",
+			"80",
+			"my_web_app",
+			"reques",
+			"app.",
+			"app",
+			"my_web_app",
+			"/user_ze",
+			"pass_c",
+			"print",
+			"pass_",
+			"закрыть",
+			"pass_",
+			"pass",
+			"pass_control",
+			"question",
+			"техподд",
+			"техподдд",
+			"end_date",
+			"register_social_email",
+			"lstr",
+			"message.",
+			"message",
+			"hash",
+			"setPauseContent",
+			"contentList-con",
+			"IPINFO_TOKEN",
+			".value",
+			"site_register",
+			"current_token",
+			"setIpCookies",
+			"<button onclick=\"if (top.location.pathname == '/account') {location.href = 'https://soulport.ru/payment?type=month'} else {set('signup')}\"><div class='btn'>Купить за 149 ₽/мес.</div></button>",
+			"<button onclick=\"if (top.location.pathname == '/account') {location.href = 'https://soulport.ru/payment?type=infinity'} else {set('signup')}\"><div class='btn'>Купить за 4 999 ₽.</div></button>",
+			"<button onclick=\"if (top.location.pathname == '/account') {location.href = 'https://soulport.ru/payment?type=year'} else {set('signup')}\"><div class='btn'>Купить за 1 499 ₽/год.</div></button>",
+			"<button type='button' class='player-play'",
+			"Play</button>",
+			"</li>",
+			"<li class='contentList-cell'>",
+			"xls",
+			"sheet",
+			"load_wor",
+			"setPauseContent(",
+			"setPauseContent",
+			"activeContentCard",
+			"self.range_end",
+			"prepare_safari_response",
+			"user_agent",
+			"activeContentCard = ",
+			"activeContentCard",
+			"prepare_safari_response",
+			"Chrome",
+			"\".*playerImage_.*\" ",
+			"playerImage_0",
+			"playerImage_.(0,.)",
+			"activeID",
+			"prepare_safari_response",
+			"activeID",
+			"browser"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#5500cc",
+			"this.",
+			"center",
+			"USDT",
+			"//logs",
+			"<div onclick=\"if (top.location.pathname == '/account') {location.href = 'https://soulport.ru/payment?type=month'} else {set('signup')}\" class=\"btn\">Купить за 149 ₽/мес.</div>",
+			"<div onclick=\"if (top.location.pathname == '/account') {location.href = 'https://soulport.ru/payment?type=infinity'} else {set('signup')}\" class='btn'>Купить за 4 999 ₽.</div>",
+			"<div onclick=\"if (top.location.pathname == '/account') {location.href = 'https://soulport.ru/payment?type=year'} else {set('signup')}\" class='btn'>Купить за 1 499 ₽/год.</div>",
+			"<div type='button' class='player-play'",
+			"Play</div>",
+			"</button>",
+			"<button class='contentList-cell' >",
+			"\"playerImage_N\" ",
+			"playerImage_N",
+			"full/",
+			"self.range_end",
+			"self.range_start",
+			"Gi",
+			"Fi",
+			"xi",
+			"disp",
+			"576",
+			"Музыка для расслабления.",
+			"музыка для расслабления.",
+			"",
+			"new,",
+			"cover.png",
+			"Музыка для расслабления.",
+			"static/covers/Звуки природы/cover.png",
+			"../fnt/",
+			"../img/",
+			"Приведите в порядок свою жизнь, пройдите через полный спектр познания себя и своего я.",
+			"",
+			"Практики к силе настоящего",
+			"Обучение медитации, расслабление, остановка мыслей.",
+			"",
+			"Путь йога",
+			"На одном дыхании",
+			"Медитации к силе подсознания",
+			"принципам",
+			"365 совето о развитию осознанности и жизни",
+			"    ",
+			"Обучение базовым принципом медитации.",
+			"],\n",
+			"\n",
+			"\\n",
+			"",
+			"Изменить себя, воздейстие на подсознание.",
+			"    ",
+			"../fnt/",
+			"playerImage_",
+			"(body + '_' + activeID.toString()",
+			"ContentCard",
+			"\"playerImage_",
+			".player-pause",
+			"../img/",
+			"static/img/",
+			"player-replayBtn",
+			"loadList();interactContent(this);",
+			"interactContent(this);",
+			"    "
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/index.js",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								501,
+								501
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 458.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Эмиль/AppData/Roaming/Sublime Text 3/Packages/User/npm.sublime-build",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JSON/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 150.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "mint-table.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
