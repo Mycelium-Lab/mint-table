@@ -28,7 +28,7 @@ const Mint = gql`
 `;
 
 const headCells = [
-  { id: 'id', numeric: false, disablePadding: true, label: 'ID' },
+  { id: 'time', numeric: false, disablePadding: true, label: 'Date' },
   { id: 'to', numeric: true, disablePadding: false, label: 'Liquidity provider' },
   { id: 'amount', numeric: true, disablePadding: false, label: 'Amount (USD)' },
 ];

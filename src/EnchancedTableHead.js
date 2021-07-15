@@ -4,14 +4,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 
-const headCells = [
-  { id: 'name', numeric: false, disablePadding: true, label: 'ID' },
-  { id: 'calories', numeric: true, disablePadding: false, label: 'Liquidity provider' },
-  { id: 'fat', numeric: true, disablePadding: false, label: 'Amount (USD)' },
-];
-
 export default function EnhancedTableHead(props) {
-  const { classes, order, orderBy, rowCount, onRequestSort } = props;
+  const { classes, order, orderBy, rowCount, onRequestSort, headCells } = props;
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };

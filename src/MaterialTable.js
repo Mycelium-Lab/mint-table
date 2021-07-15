@@ -56,7 +56,7 @@ export default function MaterialTable(props) {
               orderBy={orderBy}
               onRequestSort={handleRequestSort}
               rowCount={rows.length}
-              headCells
+              headCells={headCells}
             />
             <TableBody>
               {stableSort(rows, getComparator(order, orderBy))

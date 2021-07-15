@@ -3,12 +3,14 @@
 Uniswap v2
 
 ## Components 
- - MaterialTable - creates the interactive table with props
-   - EnchancedTableToolbar - creates toolbar with props
-   - EnchancedTableHead - creades the table heading with props
+  - MaterialTable - creates the interactive table with props
+    - EnchancedTableHead - creades the table heading with props
+  - EnchancedTableToolbar - creates toolbar with min amount and period selectors
+    
    
 ## Utils
-  - Utils.js - sort function and comparators
+  - Utils.js - sort function and comparators *(legacy)*
+  - timeConvert.js - converts timestamps to normal date and normal date to timestamps, also calculates the time travel
   
 ## Demo
 ![Somth went wrong](/img/demo.png)
@@ -20,3 +22,4 @@ Uniswap v2
   - [x] Let user change the period (1 month, ...)
   - [ ] Let user changes the amount
   - [ ] The "mint" list to each liquidity provider
+  - [ ] Deploy and fun
