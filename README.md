@@ -15,5 +15,5 @@ Uniswap v2
 
 ## Todo list
 - [x] Let Apollo make big graphQL queries (more than 100 entities) 
-- [ ] Fix sorting
+- [x] Fix sorting
 - [ ] Delete duplicates
