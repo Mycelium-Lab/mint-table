@@ -8,11 +8,12 @@ import {ApolloClient,
 } from "@apollo/client";
 
 import MaterialTable from './MaterialTable';
+import React from 'react';
 
 const Mint = gql`
   query GetMint {
-    mints(where: {amountUSD_gt: "1000000", timestamp_gt: "1618335878"}, orderBy: timestamp, orderDirection: desc) {
-      id
+    mints(where: {amountUSD_gt: "1000000", timestamp_gt: "1608335878"}, orderBy: to, orderDirection: desc) {
+      timestamp
       to
       amountUSD
     }
@@ -31,11 +32,21 @@ function App() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
+  let last = '';
+  let noDup = new Array();
+  data.mints.map(element => {
+    if (last != element.to) {
+      last = element.to;
+      noDup.push(element);
+    } 
+  });
+  console.log(noDup);
+
 
   return (
     <div>
     
-    <MaterialTable rows = {data.mints} headCells = {headCells}>
+    <MaterialTable rows = {noDup} headCells = {headCells}>
     </MaterialTable>
 
     </div>

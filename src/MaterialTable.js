@@ -97,10 +97,10 @@ export default function MaterialTable(props) {
                     <TableRow
                       hover
                       tabIndex={-1}
-                      key={row.id}
+                      key={row.timestamp}
                     >
                       <TableCell component="th" id={labelId} scope="row" padding="none">
-                        {row.id}
+                        {row.timestamp}
                       </TableCell>
                       <TableCell align="center"><a href={'https://etherscan.io/address/'+row.to}>{row.to}</a></TableCell>
                       <TableCell align="center">{row.amountUSD.toString().split('.')[0]}</TableCell>
