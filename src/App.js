@@ -1,18 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+
 import {ApolloClient,
   InMemoryCache,
   ApolloProvider,
   useQuery,
-  gql
+  gql,
+  NetworkStatus
 } from "@apollo/client";
 
+import Paper from '@material-ui/core/Paper';
 import MaterialTable from './MaterialTable';
+import EnhancedTableToolbar from './EnchancedTableToolbar';
 import React from 'react';
+import { unixToNormal, setTimestamp } from './timeConvert';
+import useStyles from './styles';
+
 
 const Mint = gql`
-  query GetMint {
-    mints(where: {amountUSD_gt: "1000000", timestamp_gt: "1608335878"}, orderBy: to, orderDirection: desc) {
+  query GetMint($timestamp: Int!) {
+    mints(where: {amountUSD_gt: "1000000", timestamp_gt: $timestamp}, orderBy: to, orderDirection: desc) {
       timestamp
       to
       amountUSD
@@ -26,28 +33,67 @@ const headCells = [
   { id: 'amount', numeric: true, disablePadding: false, label: 'Amount (USD)' },
 ];
 
-function App() {
-  const { loading, error, data } = useQuery(Mint);
+function noDup(data) {
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
   let last = '';
-  let noDup = new Array();
+  let newArray = new Array();
   data.mints.map(element => {
     if (last != element.to) {
       last = element.to;
-      noDup.push(element);
+      newArray.push(element);
     } 
   });
-  console.log(noDup);
+  return newArray;
+}
 
+function App() {
+  
+  const classes = useStyles();
+  const [timeStamp, setTimeStamp] = React.useState(setTimestamp(0));
+  const { loading, error, data, refetch, networkStatus } = useQuery(Mint, {
+    variables: { timestamp: timeStamp  },
+    notifyOnNetworkStatusChange: true,
+    fetchPolicy:"cache-and-network"
+  });
+  const [tableData, setTableData] = React.useState([]);
+
+  React.useEffect(() => {
+
+    if (error) console.log(error);
+    if (!loading) {
+      console.log(noDup(data));
+      setTableData(noDup(data));
+    }
+  
+  },[data]);
+
+  const handleToolbarChanged = (type, value) => {
+
+    if (type == "period") {
+      setTimeStamp(parseInt(setTimestamp(value)));
+    }
+    /*
+    console.log(timestamp);
+    await refetch({ variables: { timestamp } });
+    console.log(noDup(data));
+    setTableData(noDup(data));*/
+
+  };
+
+  if (networkStatus === NetworkStatus.refetch) return 'Refetching!';
 
   return (
     <div>
-    
-    <MaterialTable rows = {noDup} headCells = {headCells}>
-    </MaterialTable>
-
+      <div className={classes.root}>
+        <Paper className={classes.paper}>
+          <EnhancedTableToolbar onChange={handleToolbarChanged} />
+          {!loading && (
+            <MaterialTable rows = {tableData} headCells = {headCells} classes={classes}>
+            </MaterialTable>
+            )
+          }
+        </Paper>
+      </div>
     </div>
   );
 }

@@ -1,49 +1,22 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 
-import EnhancedTableToolbar from './EnchancedTableToolbar'
 import EnhancedTableHead from './EnchancedTableHead';
 
-
+import unixToNormal from './timeConvert';
 import {stableSort, getComparator} from './Utils';
 
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-  },
-  paper: {
-    width: '100%',
-    marginBottom: theme.spacing(2),
-  },
-  table: {
-    minWidth: 750,
-    margin: 10,
-  },
-  visuallyHidden: {
-    border: 2,
-    clip: 'rect(0 0 0 0)',
-    height: 1,
-    margin: -1,
-    overflow: 'hidden',
-    padding: 0,
-    position: 'absolute',
-    top: 20,
-    width: 1,
-  },
-}));
-
 export default function MaterialTable(props) {
-  const { rows, headCells } = props;
-  const classes = useStyles();
+
+
+  const { rows, headCells, classes } = props;
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
   const [selected, setSelected] = React.useState([]);
@@ -69,9 +42,7 @@ export default function MaterialTable(props) {
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
   return (
-    <div className={classes.root}>
-      <Paper className={classes.paper}>
-        <EnhancedTableToolbar />
+        <div>
         <TableContainer>
           <Table
             className={classes.table}
@@ -100,7 +71,7 @@ export default function MaterialTable(props) {
                       key={row.timestamp}
                     >
                       <TableCell component="th" id={labelId} scope="row" padding="none">
-                        {row.timestamp}
+                        {unixToNormal(row.timestamp)}
                       </TableCell>
                       <TableCell align="center"><a href={'https://etherscan.io/address/'+row.to}>{row.to}</a></TableCell>
                       <TableCell align="center">{row.amountUSD.toString().split('.')[0]}</TableCell>
@@ -124,7 +95,6 @@ export default function MaterialTable(props) {
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
-      </Paper>
-    </div>
+        </div>
   );
 }
