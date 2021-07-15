@@ -14,6 +14,9 @@ Uniswap v2
 ![Somth went wrong](/img/demo.png)
 
 ## Todo list
-- [x] Let Apollo make big graphQL queries (more than 100 entities) 
-- [x] Fix sorting
-- [ ] Delete duplicates
+  - [x] Let Apollo make big graphQL queries (more than 100 entities) 
+  - [x] Fix sorting
+  - [x] Delete duplicates
+  - [x] Let user change the period (1 month, ...)
+  - [ ] Let user changes the amount
+  - [ ] The "mint" list to each liquidity provider
