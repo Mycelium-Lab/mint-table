@@ -26,7 +26,6 @@ const headCells = [
   { id: 'amount', numeric: true, disablePadding: false, label: 'Amount (USD)' },
 ];
 
-
 function App() {
   const { loading, error, data } = useQuery(Mint);
 
