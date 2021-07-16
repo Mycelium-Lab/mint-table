@@ -20,6 +20,6 @@ Uniswap v2
   - [x] Fix sorting
   - [x] Delete duplicates
   - [x] Let user change the period (1 month, ...)
-  - [ ] Let user changes the amount
+  - [x] Let user changes the amount
   - [ ] The "mint" list to each liquidity provider
   - [ ] Deploy and fun
