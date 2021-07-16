@@ -17,9 +17,7 @@ import { unixToNormal, setTimestamp } from './timeConvert';
 import useStyles from './styles';
 
 const headCells = [
-  { id: 'time',  disablePadding: true, label: 'Date' },
   { id: 'to', disablePadding: false, label: 'Liquidity provider' },
-  { id: 'amount', disablePadding: false, label: 'Amount (USD)' },
 ];
 
 const Mint = gql`
@@ -45,14 +43,31 @@ const Mint = gql`
 function noDup(data) {
   console.log(data.mints);
   let last = '';
-  let newArray = new Array();
+  let newObject = new Object();
   data.mints.map(element => {
-    if (last != element.to) {
-      last = element.to;
-      newArray.push(element);
-    } 
+    if (!(element.to in newObject)) {
+      newObject[element.to] = [];
+      newObject[element.to].push({
+        date:element.timestamp,
+        token0: element.pair.token0.name,
+        token1: element.pair.token1.name,
+        amount0: element.amount0,
+        amount1: element.amount1,
+        amountUSD: element.amountUSD
+      })
+    }
+    else {
+      newObject[element.to].push({
+        date:element.timestamp,
+        token0: element.pair.token0.name,
+        token1: element.pair.token1.name,
+        amount0: element.amount0,
+        amount1: element.amount1,
+        amountUSD: element.amountUSD
+      })
+    }
   });
-  return newArray;
+  return newObject;
 }
 
 function App() {

@@ -19,7 +19,6 @@ export default function MaterialTable(props) {
   const { rows, headCells, classes } = props;
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
-  const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [dense] = React.useState(false);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -39,7 +38,7 @@ export default function MaterialTable(props) {
     setPage(0);
   };
 
-  const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+  const emptyRows = rowsPerPage - Math.min(rowsPerPage, Object.keys(rows).length - page * rowsPerPage);
 
   return (
         <div>
@@ -59,22 +58,19 @@ export default function MaterialTable(props) {
               headCells={headCells}
             />
             <TableBody>
-              {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
-                  const labelId = `enhanced-table-checkbox-${index}`;
-
+              {Object.entries(rows)
+                .slice(page * rowsPerPage, page * rowsPerPage+rowsPerPage)
+                .map(([row, value]) => {
+                  const labelId = `enhanced-table-checkbox-${row}`;
                   return (
                     <TableRow
                       hover
                       tabIndex={-1}
                       key={row.timestamp}
                     >
-                      <TableCell component="th" id={labelId} scope="row" padding="none">
-                        {unixToNormal(row.timestamp)}
+                      <TableCell component="th" id={labelId} scope="row" padding="none" align="center">
+                        {<a href={'https://etherscan.io/address/'+row}>{row}</a>}
                       </TableCell>
-                      <TableCell align="center"><a href={'https://etherscan.io/address/'+row.to}>{row.to}</a></TableCell>
-                      <TableCell align="center">{row.amountUSD.toString().split('.')[0]}</TableCell>
                     </TableRow>
                   );
                 })}
@@ -89,7 +85,7 @@ export default function MaterialTable(props) {
         <TablePagination
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
-          count={rows.length}
+          count={Object.keys(rows).length}
           rowsPerPage={rowsPerPage}
           page={page}
           onPageChange={handleChangePage}
