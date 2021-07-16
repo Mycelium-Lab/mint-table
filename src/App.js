@@ -16,9 +16,6 @@ import React from 'react';
 import { unixToNormal, setTimestamp } from './timeConvert';
 import useStyles from './styles';
 
-const headCells = [
-  { id: 'to', disablePadding: false, label: 'Liquidity provider' },
-];
 
 const Mint = gql`
   query GetMint($timestamp: Int!, $amount: String!) {
@@ -116,7 +113,7 @@ function App() {
         <Paper className={classes.paper}>
           <EnhancedTableToolbar onChange={handleToolbarChanged} />
           {!loading && (
-            <MaterialTable rows = {tableData} headCells = {headCells} classes={classes}>
+            <MaterialTable rows = {tableData} classes={classes}>
             </MaterialTable>
             )
           }

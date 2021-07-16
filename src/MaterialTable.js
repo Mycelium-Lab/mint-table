@@ -16,7 +16,7 @@ import {stableSort, getComparator} from './Utils';
 
 export default function MaterialTable(props) {
 
-  const { rows, headCells, classes } = props;
+  const { rows, classes } = props;
 
   const [page, setPage] = React.useState(0);
   const [dense] = React.useState(false);
@@ -48,11 +48,6 @@ export default function MaterialTable(props) {
             size={dense ? 'small' : 'medium'}
             aria-label="enhanced table"
           >
-            <EnhancedTableHead
-              classes={classes}
-              rowCount={rows.length}
-              headCells={headCells}
-            />
             <TableBody>
               {Object.entries(rows)
                 .slice(page * rowsPerPage, page * rowsPerPage+rowsPerPage)
