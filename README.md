@@ -9,7 +9,7 @@ Uniswap v2
   - EnchancedTableToolbar - creates toolbar with min amount and period selectors
     
 
-##Styles
+## Styles
   - styles.js
 
 ## Utils
