@@ -5,10 +5,13 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import AdditionalTable from './AdditionalTable';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    margin: '2%',
+    
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -17,34 +20,32 @@ const useStyles = makeStyles((theme) => ({
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
   },
 }));
 
-export default function ControlledAccordions(props) {
-	const {key, data, onChange} = props;
+export default function SmartAccordion(props) {
+	const {name, data, onChange, expanded} = props;
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
+  	onChange(isExpanded ? panel : false);
   };
 
   return (
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <Accordion expanded={expanded === name} onChange={handleChange(name)}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
+          aria-controls={name+"-controls"}
+          id={name+"-header"}
         >
           <Typography className={classes.heading}>Wallet address </Typography>
-          <Typography className={classes.secondaryHeading}>I am an accordion</Typography>
+          <Typography className={classes.secondaryHeading}>
+          	<a href={'https://etherscan.io/address/'+name}>{name}</a>
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-            maximus est, id dignissim quam.
-          </Typography>
+          <AdditionalTable rows={data} />
         </AccordionDetails>
       </Accordion>
   );
