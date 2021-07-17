@@ -19,6 +19,8 @@ Uniswap v2
 ## Demo
 ![Somth went wrong](/img/demo.png)
 
+U can test the demo in https://60f32acfb66d4b5a0003c781--amazing-benz-3fd575.netlify.app/
+
 ## Todo list
   - [x] Let Apollo make big graphQL queries (more than 100 entities) 
   - [x] Fix sorting
@@ -26,6 +28,6 @@ Uniswap v2
   - [x] Let user change the period (1 month, ...)
   - [x] Let user changes the amount
   - [x] The "mint" list to each liquidity provider
-  - [ ] Deploy and fun
+  - [X] Deploy and fun
   - [ ] Prettify the code, and add some comments
   - [ ] Redesign the UI
