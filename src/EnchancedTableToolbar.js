@@ -7,7 +7,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import React from 'react';
 
-
 const useToolbarStyles = makeStyles((theme) => ({
   title: {
     flex: '1 1 100%',
@@ -25,7 +24,7 @@ export default function EnhancedTableToolbar ({onChange}){
   let menuNames = ['1 month','3 months','1 year'];
   let amoNames = ['1 M','500 K','100 K'];
 
-  const handleClickDate = (event) => {
+  const handleClickDate = (event) => { // хендлы кликов по элементам меню
     setDate(event.currentTarget);
   };
 
@@ -33,18 +32,18 @@ export default function EnhancedTableToolbar ({onChange}){
     setAmo(event.currentTarget);
   };
 
-  const handleCloseDate = () => {
+  const handleCloseDate = () => { // хендлы закрытия меню
     setDate(null);
   };
-
-  const changeItemDate = (value) => {
-    setDateName(menuNames[value]);
-    onChange('period',value);
-  }
 
   const handleCloseAmo = () => {
     setAmo(null);
   };
+
+  const changeItemDate = (value) => { // хендлы выбора элементов меню
+    setDateName(menuNames[value]);
+    onChange('period',value);
+  }
 
   const changeItemAmo = (value) => {
     setAmoName(amoNames[value]);

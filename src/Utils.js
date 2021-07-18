@@ -25,3 +25,33 @@ function stableSort(array, comparator) {
   });
   return stabilizedThis.map((el) => el[0]);
 }
+
+export default function noDup(data) {
+  //console.log(data.mints);
+  let last = '';
+  let newObject = new Object();
+  data.mints.map(element => {
+    if (!(element.to in newObject)) {
+      newObject[element.to] = [];
+      newObject[element.to].push({
+        date:element.timestamp,
+        token0: element.pair.token0.name,
+        token1: element.pair.token1.name,
+        amount0: element.amount0,
+        amount1: element.amount1,
+        amountUSD: element.amountUSD
+      })
+    }
+    else {
+      newObject[element.to].push({
+        date:element.timestamp,
+        token0: element.pair.token0.name,
+        token1: element.pair.token1.name,
+        amount0: element.amount0,
+        amount1: element.amount1,
+        amountUSD: element.amountUSD
+      })
+    }
+  });
+  return newObject;
+}
