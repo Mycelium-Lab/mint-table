@@ -32,25 +32,23 @@ export default function noDup(data) {
   let newObject = new Object();
   data.mints.map(element => {
     if (!(element.to in newObject)) {
-      newObject[element.to] = [];
-      newObject[element.to].push({
-        date:element.timestamp,
-        token0: element.pair.token0.name,
-        token1: element.pair.token1.name,
-        amount0: element.amount0,
-        amount1: element.amount1,
-        amountUSD: element.amountUSD
-      })
+      newObject[element.to] = {"totalAmount":parseFloat(element.amountUSD),data:[]};
     }
-    else {
-      newObject[element.to].push({
-        date:element.timestamp,
-        token0: element.pair.token0.name,
-        token1: element.pair.token1.name,
-        amount0: element.amount0,
-        amount1: element.amount1,
-        amountUSD: element.amountUSD
-      })
+    newObject[element.to].data.push({
+      date:element.timestamp,
+      token0: element.pair.token0.symbol,
+      token1: element.pair.token1.symbol,
+      amountUSD: element.amountUSD,
+      flag: 1
+    })
+    for (let burn of element.transaction.burns) {
+      newObject[element.to].data.push({
+      date:burn.timestamp,
+      token0: burn.pair.token0.symbol,
+      token1: burn.pair.token1.symbol,
+      amountUSD: burn.amountUSD,
+      flag: 0
+    })
     }
   });
   return newObject;

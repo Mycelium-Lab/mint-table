@@ -20,7 +20,7 @@ export default function MaterialTable(props) {
 
   const [page, setPage] = React.useState(0);
   const [dense] = React.useState(false);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(25);
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChangePage = (event, newPage) => {
@@ -33,8 +33,9 @@ export default function MaterialTable(props) {
   };
 
   const handleAccordion = (value) => {
-    console.log(value);
+
     setExpanded(value);
+    
   }
 
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, Object.keys(rows).length - page * rowsPerPage);

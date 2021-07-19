@@ -25,14 +25,26 @@ const Mint = gql`
       timestamp
       to
       amountUSD
-      amount0
-      amount1
       pair {
+        id
         token0 {
-          name
+          symbol
         }
         token1 {
-          name
+          symbol
+        }
+      }
+      transaction {
+        burns {
+          amountUSD
+          pair {
+            token0 {
+              symbol
+            }
+            token1 {
+              symbol
+            }
+          }
         }
       }
     }

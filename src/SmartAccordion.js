@@ -37,13 +37,21 @@ export default function SmartAccordion(props) {
           aria-controls={name+"-controls"}
           id={name+"-header"}
         >
-          <Typography className={classes.heading}>Wallet address </Typography>
-          <Typography className={classes.secondaryHeading}>
+          <Typography className={classes.heading} align='center'>
           	<a href={'https://etherscan.io/address/'+name}>{name}</a>
+          </Typography>
+          <Typography className={classes.heading} align='center'>
+            {'$ '+data.totalAmount.toString().split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          </Typography>
+          <Typography className={classes.heading} align='center'>
+            {data.data.length}
+          </Typography>
+          <Typography className={classes.heading} align='center'>
+            {data.data.length}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <AdditionalTable rows={data} />
+          <AdditionalTable rows={data.data} />
         </AccordionDetails>
       </Accordion>
   );
