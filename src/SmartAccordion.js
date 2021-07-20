@@ -31,14 +31,18 @@ export default function SmartAccordion(props) {
   };
 
   return (
+    <React.Fragment>
       <Accordion expanded={expanded === name} onChange={handleChange(name)}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={name+"-controls"}
           id={name+"-header"}
+          style={{flex: 1, flexDirection: 'row'}}
         >
           <Typography className={classes.heading} align='center'>
-          	<a href={'https://etherscan.io/address/'+name}>{name}</a>
+          	<a href={'https://etherscan.io/address/'+name}>
+              {name}
+            </a>
           </Typography>
           <Typography className={classes.heading} align='center'>
             {'$ '+data.totalAmount.toString().split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
@@ -54,5 +58,6 @@ export default function SmartAccordion(props) {
           <AdditionalTable rows={data.data} />
         </AccordionDetails>
       </Accordion>
+    </React.Fragment>
   );
 }

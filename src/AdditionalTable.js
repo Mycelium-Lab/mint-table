@@ -25,14 +25,13 @@ const RedTextTypography = withStyles({
 
 const GreenTextTypography = withStyles({
   root: {
-    color: "#00FF33"
+    color: "#00FF00"
   }
 })(Typography);
 
 
 export default function AdditionalTable(props) {
   const { rows } = props;
-  console.log(rows);
   const classes = useStyles();
 
   return (

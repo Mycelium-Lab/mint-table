@@ -10,7 +10,6 @@ import TableRow from '@material-ui/core/TableRow';
 import EnhancedTableHead from './EnchancedTableHead';
 import SmartAccordion from './SmartAccordion';
 
-import unixToNormal from './timeConvert';
 import {stableSort, getComparator} from './Utils';
 
 
@@ -48,6 +47,7 @@ export default function MaterialTable(props) {
             aria-labelledby="tableTitle"
             size={dense ? 'small' : 'medium'}
             aria-label="enhanced table"
+            stickyHeader
           >
             <TableBody>
               {Object.entries(rows)

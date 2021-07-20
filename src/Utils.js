@@ -28,8 +28,7 @@ function stableSort(array, comparator) {
 
 export default function noDup(data) {
   //console.log(data.mints);
-  let last = '';
-  let newObject = new Object();
+  let newObject = {};
   data.mints.map(element => {
     if (!(element.to in newObject)) {
       newObject[element.to] = {"totalAmount":parseFloat(element.amountUSD),data:[]};
@@ -42,6 +41,7 @@ export default function noDup(data) {
       flag: 1
     })
     for (let burn of element.transaction.burns) {
+      console.log(element.to);
       newObject[element.to].data.push({
       date:burn.timestamp,
       token0: burn.pair.token0.symbol,

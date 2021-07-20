@@ -2,19 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import {ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
+import {
   useQuery,
-  gql,
-  NetworkStatus
+  gql
 } from "@apollo/client";
 
 import Paper from '@material-ui/core/Paper';
 import MaterialTable from './MaterialTable'; // компонент для главной таблицы с аккордионами
 import EnhancedTableToolbar from './EnchancedTableToolbar'; // тулбар для главной таблицы 
 
-import { unixToNormal, setTimestamp } from './timeConvert'; // функции для конвертации unix-формата времени в нормальный и 
+import { setTimestamp } from './timeConvert'; // функции для конвертации unix-формата времени в нормальный и 
 import noDup from './Utils'; // функция для формирования объекта данных из данных, полученных при graphQL запросе
 import useStyles from './styles'; // стили
 
@@ -37,6 +34,7 @@ const Mint = gql`
       transaction {
         burns {
           amountUSD
+          timestamp
           pair {
             token0 {
               symbol
@@ -70,7 +68,6 @@ function App() {
 
     if (error) console.log(error);
     if (!loading) {
-      console.log(noDup(data));
       setTableData(noDup(data));
     }
   
