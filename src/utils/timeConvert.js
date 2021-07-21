@@ -14,7 +14,7 @@ function setTimestamp(value) {
   var today = new Date();
   if (!value) 
     return new Date(today.getFullYear(), today.getMonth()-1, today.getDate()).getTime() / 1000;
-  else if (value == 1) 
+  else if (value === 1) 
     return new Date(today.getFullYear(), today.getMonth()-3, today.getDate()).getTime() / 1000;
   return new Date(today.getFullYear()-1, today.getMonth(), today.getDate()).getTime() / 1000;
 }

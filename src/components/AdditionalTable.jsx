@@ -39,15 +39,15 @@ export default function AdditionalTable(props) {
       <Table className={classes.table} size="small" aria-label="additional table">
         <TableHead>
           <TableRow>
-            <TableCell>Date</TableCell>
+            <TableCell align="center">Date</TableCell>
             <TableCell align="center">Pair</TableCell>
             <TableCell align="center">Total amount (USD)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.date}>
-              <TableCell component="th" scope="row">
+            <TableRow key={row.date+"_"+row.flag}>
+              <TableCell component="th" scope="row" align="center">
                 {unixToNormal(row.date)}
               </TableCell>
               <TableCell align="center">

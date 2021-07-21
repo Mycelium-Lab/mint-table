@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import {
@@ -8,8 +7,8 @@ import {
 } from "@apollo/client";
 
 import Paper from '@material-ui/core/Paper';
-import MaterialTable from './components/MaterialTable'; // компонент для главной таблицы с аккордионами
-import EnhancedTableToolbar from './components/EnchancedTableToolbar'; // тулбар для главной таблицы 
+import MaterialTable from './components/MaterialTable.jsx'; // компонент для главной таблицы с аккордионами
+import EnhancedTableToolbar from './components/EnchancedTableToolbar.jsx'; // тулбар для главной таблицы 
 
 import { setTimestamp } from './utils/timeConvert'; // функции для конвертации unix-формата времени в нормальный и 
 import noDup from './utils/Utils'; // функция для формирования объекта данных из данных, полученных при graphQL запросе

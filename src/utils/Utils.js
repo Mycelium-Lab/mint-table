@@ -31,8 +31,10 @@ export default function noDup(data) {
   let newObject = {};
   data.mints.map(element => {
     if (!(element.to in newObject)) {
-      newObject[element.to] = {"totalAmount":parseFloat(element.amountUSD),data:[]};
+      newObject[element.to] = {totalAmount:parseFloat(0),data:[], active:0};
     }
+    newObject[element.to].totalAmount = newObject[element.to].totalAmount + parseFloat(element.amountUSD);
+    newObject[element.to].active +=1;
     newObject[element.to].data.push({
       date:element.timestamp,
       token0: element.pair.token0.symbol,
@@ -41,12 +43,18 @@ export default function noDup(data) {
       flag: 1
     })
     for (let burn of element.transaction.burns) {
-      console.log(element.to);
+      //console.log(element.to);
+      
+      if ((parseFloat(element.amountUSD) - parseFloat(burn.amountUSD)) < parseFloat(1000)) {
+        newObject[element.to].active -= 1;
+        //console.log(parseFloat(element.amountUSD) - parseFloat(burn.amountUSD));
+      }
+      
       newObject[element.to].data.push({
-      date:burn.timestamp,
+      date: burn.timestamp,
       token0: burn.pair.token0.symbol,
       token1: burn.pair.token1.symbol,
-      amountUSD: burn.amountUSD,
+      amountUSD: burn.amountUSD.toString().split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","),
       flag: 0
     })
     }
