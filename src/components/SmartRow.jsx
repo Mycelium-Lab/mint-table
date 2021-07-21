@@ -29,7 +29,7 @@ export default function SmartRow(props) {
 
   return (
     <React.Fragment>
-      <TableRow className={classes.root} key={name}>
+      <TableRow className={classes.root} key={name} >
         <TableCell>
           <IconButton aria-label="expand row" size="small" onClick={() => handleChange(name, open)}>
             {(expanded === name) ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}

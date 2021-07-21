@@ -49,7 +49,7 @@ export default function MaterialTable(props) {
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, Object.keys(rows).length - page * rowsPerPage);
 
   return (
-        <div>
+        <div style={{backgroundColor: 'whiteSmoke'}}>
         <TableContainer className={classes.container}>
           <Table
             className={classes.table}

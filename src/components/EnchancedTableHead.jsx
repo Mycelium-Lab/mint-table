@@ -4,6 +4,16 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 
+import { withStyles } from '@material-ui/core/styles';
+
+
+const StyledTableRow = withStyles((theme) => ({
+  root: {
+      '&:nth-of-type(odd)': {
+      backgroundColor: theme.palette.action.hover,
+    },
+  },
+}))(TableRow);
 
 export default function EnhancedTableHead(props) {
   const { classes, order, orderBy, onRequestSort, headCells } = props;
@@ -15,7 +25,7 @@ export default function EnhancedTableHead(props) {
   return (
     <React.Fragment>
       <TableHead>
-        <TableRow>
+        <StyledTableRow>
           {headCells.map((headCell) => (
             <TableCell
               key={headCell.id}
@@ -37,7 +47,7 @@ export default function EnhancedTableHead(props) {
               </TableSortLabel>
             </TableCell>
           ))}
-        </TableRow>
+        </StyledTableRow>
       </TableHead>
     </React.Fragment>
   );

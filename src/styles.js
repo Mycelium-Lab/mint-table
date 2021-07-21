@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.text.secondary,
+    backgroundColor: theme.palette.common.gray,
     width: '100%',
   },
   paper: {
