@@ -19,11 +19,20 @@ export default function MaterialTable(props) {
 
   const [page, setPage] = React.useState(0);
   const [dense] = React.useState(false);
+  const [order, setOrder] = React.useState('asc');
+  const [orderBy, setOrderBy] = React.useState('totalAmount');
   const [rowsPerPage, setRowsPerPage] = React.useState(25);
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
+  };
+
+  const handleRequestSort = (event, property) => {
+    const isAsc = orderBy === property && order === 'asc';
+    setOrder(isAsc ? 'desc' : 'asc');
+    setOrderBy(property);
+    //console.log(property);
   };
 
   const handleChangeRowsPerPage = (event) => {
@@ -49,9 +58,15 @@ export default function MaterialTable(props) {
             aria-label="enhanced table"
             stickyHeader
           >
-            <EnhancedTableHead headCells={headCells} />
+            <EnhancedTableHead
+            headCells={headCells}
+            classes={classes}
+            order={order}
+            orderBy={orderBy}
+            onRequestSort={handleRequestSort}
+            />
             <TableBody>
-              {Object.entries(rows)
+              {stableSort(Object.entries(rows), getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage+rowsPerPage)
                 .map(([row, value]) => {
                   const labelId = `enhanced-table-checkbox-${row}`;

@@ -4,6 +4,7 @@ Uniswap v2
 
 ## Components 
   - MaterialTable - creates the interactive table with props
+    - EnchancedTableHead - creates the header of the table, which uses to select the sorting field and sorting direction
     - SmartAccordion - creates the pull-out card with wallet addres and additiona info *(legacy)*
       - AdditionalTable - creates the table with the mint data of this liquidity provider
     - SmartRow - creates the pull-out card with wallet addres and additiona info *(used)*

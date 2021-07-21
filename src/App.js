@@ -50,10 +50,10 @@ const Mint = gql`
 
 const headCells = [
   {id: "Empty", label: "", disablePadding: false},
-  {id: "Adress", label: "Wallet address", disablePadding: false},
-  {id: "Total", label: "Total amount", disablePadding: false},
-  {id: "Count", label: "Total events", disablePadding: false},
-  {id: "Active", label: "Active pools", disablePadding: false},
+  {id: "address", label: "Wallet address", disablePadding: false},
+  {id: "totalAmount", label: "Total amount", disablePadding: false},
+  {id: "length", label: "Total events", disablePadding: false},
+  {id: "active", label: "Active pools", disablePadding: false},
 ]
 
 

@@ -17,9 +17,10 @@ function descendingComparator(a, b, orderBy) {
 }
 
 function stableSort(array, comparator) {
+
   const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
-    const order = comparator(a[0], b[0]);
+    const order = comparator(a[0][1], b[0][1]);
     if (order !== 0) return order;
     return a[1] - b[1];
   });
@@ -31,10 +32,11 @@ export default function noDup(data) {
   let newObject = {};
   data.mints.map(element => {
     if (!(element.to in newObject)) {
-      newObject[element.to] = {totalAmount:parseFloat(0),data:[], active:0};
+      newObject[element.to] = {totalAmount:parseFloat(0),data:[], active:0, length:0};
     }
     newObject[element.to].totalAmount = newObject[element.to].totalAmount + parseFloat(element.amountUSD);
     newObject[element.to].active +=1;
+    newObject[element.to].length +=1;
     newObject[element.to].data.push({
       date:element.timestamp,
       token0: element.pair.token0.symbol,
@@ -44,7 +46,7 @@ export default function noDup(data) {
     })
     for (let burn of element.transaction.burns) {
       //console.log(element.to);
-      
+      newObject[element.to].length +=1;
       if ((parseFloat(element.amountUSD) - parseFloat(burn.amountUSD)) < parseFloat(1000)) {
         newObject[element.to].active -= 1;
         //console.log(parseFloat(element.amountUSD) - parseFloat(burn.amountUSD));
