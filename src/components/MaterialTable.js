@@ -8,14 +8,14 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 
 import EnhancedTableHead from './EnchancedTableHead';
-import SmartAccordion from './SmartAccordion';
+import SmartRow from './SmartRow';
 
-import {stableSort, getComparator} from './Utils';
+import {stableSort, getComparator} from '../utils/Utils';
 
 
 export default function MaterialTable(props) {
 
-  const { rows, classes } = props;
+  const { headCells, rows, classes } = props;
 
   const [page, setPage] = React.useState(0);
   const [dense] = React.useState(false);
@@ -31,7 +31,7 @@ export default function MaterialTable(props) {
     setPage(0);
   };
 
-  const handleAccordion = (value) => {
+  const handleRow = (value) => {
 
     setExpanded(value);
     
@@ -41,7 +41,7 @@ export default function MaterialTable(props) {
 
   return (
         <div>
-        <TableContainer>
+        <TableContainer className={classes.container}>
           <Table
             className={classes.table}
             aria-labelledby="tableTitle"
@@ -49,13 +49,14 @@ export default function MaterialTable(props) {
             aria-label="enhanced table"
             stickyHeader
           >
+            <EnhancedTableHead headCells={headCells} />
             <TableBody>
               {Object.entries(rows)
                 .slice(page * rowsPerPage, page * rowsPerPage+rowsPerPage)
                 .map(([row, value]) => {
                   const labelId = `enhanced-table-checkbox-${row}`;
                   return (
-                    <SmartAccordion name={row} onChange={handleAccordion} data={value} expanded={expanded}/>
+                    <SmartRow name={row} onChange={handleRow} data={value} expanded={expanded}/>
                   );
                 })}
               {emptyRows > 0 && (

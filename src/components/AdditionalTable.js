@@ -9,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import unixToNormal from './timeConvert';
+import unixToNormal from '../utils/timeConvert';
 
 const useStyles = makeStyles({
   table: {

@@ -8,11 +8,11 @@ import {
 } from "@apollo/client";
 
 import Paper from '@material-ui/core/Paper';
-import MaterialTable from './MaterialTable'; // компонент для главной таблицы с аккордионами
-import EnhancedTableToolbar from './EnchancedTableToolbar'; // тулбар для главной таблицы 
+import MaterialTable from './components/MaterialTable'; // компонент для главной таблицы с аккордионами
+import EnhancedTableToolbar from './components/EnchancedTableToolbar'; // тулбар для главной таблицы 
 
-import { setTimestamp } from './timeConvert'; // функции для конвертации unix-формата времени в нормальный и 
-import noDup from './Utils'; // функция для формирования объекта данных из данных, полученных при graphQL запросе
+import { setTimestamp } from './utils/timeConvert'; // функции для конвертации unix-формата времени в нормальный и 
+import noDup from './utils/Utils'; // функция для формирования объекта данных из данных, полученных при graphQL запросе
 import useStyles from './styles'; // стили
 
 // запрос к GraphQL для получения событий пополнения ликвидности
@@ -48,6 +48,14 @@ const Mint = gql`
     }
   }
 `;
+
+const headCells = [
+  {id: "Empty", label: "", disablePadding: false},
+  {id: "Adress", label: "Wallet address", disablePadding: false},
+  {id: "Total", label: "Total amount", disablePadding: false},
+  {id: "Count", label: "Total events", disablePadding: false},
+  {id: "Active", label: "Active pools", disablePadding: false},
+]
 
 
 function App() {
@@ -97,7 +105,7 @@ function App() {
         <Paper className={classes.paper}>
           <EnhancedTableToolbar onChange={handleToolbarChanged} />
           {!loading && (
-            <MaterialTable rows = {tableData} classes={classes}>
+            <MaterialTable rows = {tableData} classes={classes} headCells={headCells}>
             </MaterialTable>
             )
           }

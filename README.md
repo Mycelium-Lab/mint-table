@@ -4,7 +4,9 @@ Uniswap v2
 
 ## Components 
   - MaterialTable - creates the interactive table with props
-    - SmartAccordion - creates the pull-out card with wallet addres and additiona info
+    - SmartAccordion - creates the pull-out card with wallet addres and additiona info *(legacy)*
+      - AdditionalTable - creates the table with the mint data of this liquidity provider
+    - SmartRow - creates the pull-out card with wallet addres and additiona info *(used)*
       - AdditionalTable - creates the table with the mint data of this liquidity provider
   - EnchancedTableToolbar - creates toolbar with min amount and period selectors
     
@@ -28,6 +30,9 @@ U can test the demo in https://60f32acfb66d4b5a0003c781--amazing-benz-3fd575.net
   - [x] Let user change the period (1 month, ...)
   - [x] Let user changes the amount
   - [x] The "mint" list to each liquidity provider
-  - [X] Deploy and fun
+  - [x] Deploy and fun
+  - [x] New fields in the addtional table
+  - [x] Sticky header of the table
+  - [x] Add the burn events (now: green - mints, red - burns)
   - [ ] Prettify the code, and add some comments
   - [ ] Redesign the UI

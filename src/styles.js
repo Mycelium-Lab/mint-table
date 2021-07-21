@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 750,
     margin: 10,
   },
+  container: {
+    maxHeight: 440,
+  },
   visuallyHidden: {
     border: 2,
     clip: 'rect(0 0 0 0)',

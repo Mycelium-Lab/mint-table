@@ -9,18 +9,20 @@ export default function EnhancedTableHead(props) {
   const { classes, order, orderBy, rowCount, onRequestSort, headCells } = props;
 
   return (
-    <TableHead>
-      <TableRow>
-        {headCells.map((headCell) => (
-          <TableCell
-            key={headCell.id}
-            align={'center'}
-            padding={headCell.disablePadding ? 'none' : 'normal'}
-          >
-          {headCell.label}
-          </TableCell>
-        ))}
-      </TableRow>
-    </TableHead>
+    <React.Fragment>
+      <TableHead>
+        <TableRow>
+          {headCells.map((headCell) => (
+            <TableCell
+              key={headCell.id}
+              align={'center'}
+              padding={headCell.disablePadding ? 'none' : 'normal'}
+            >
+            {headCell.label}
+            </TableCell>
+          ))}
+        </TableRow>
+      </TableHead>
+    </React.Fragment>
   );
 }
