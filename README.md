@@ -16,13 +16,13 @@ Uniswap v2
   - styles.js
 
 ## Utils
-  - Utils.js - sort function and comparators *(legacy)*
+  - Utils.js - sort function and comparators AND data object formatting
   - timeConvert.js - converts timestamps to normal date and normal date to timestamps, also calculates the time travel
   
 ## Demo
 ![Somth went wrong](/img/demo.png)
 
-U can test the demo in https://60f32acfb66d4b5a0003c781--amazing-benz-3fd575.netlify.app/
+U can test the demo in https://amazing-benz-3fd575.netlify.app/
 
 ## Todo list
   - [x] Let Apollo make big graphQL queries (more than 100 entities) 
