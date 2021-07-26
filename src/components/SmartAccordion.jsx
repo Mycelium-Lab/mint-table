@@ -7,6 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AdditionalTable from './AdditionalTable';
 
+// уже не используется, но если интересно - можешь посмотреть
+// это грамотный вариант выдвижного списка
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',

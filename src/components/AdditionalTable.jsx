@@ -9,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import unixToNormal from '../utils/timeConvert';
+import unixToNormal from '../utils/timeConvert'; // получаем нормальное время
 
 const useStyles = makeStyles({
   table: {
@@ -17,13 +17,13 @@ const useStyles = makeStyles({
   },
 });
 
-const RedTextTypography = withStyles({
+const RedTextTypography = withStyles({  // компонент стиляга - текст красного цвета
   root: {
     color: "#FF0033"
   }
 })(Typography);
 
-const GreenTextTypography = withStyles({
+const GreenTextTypography = withStyles({  // компонент стиляга - текст зеленого цвета
   root: {
     color: "#00FF00"
   }

@@ -7,7 +7,7 @@ import TableSortLabel from '@material-ui/core/TableSortLabel';
 import { withStyles } from '@material-ui/core/styles';
 
 
-const StyledTableRow = withStyles((theme) => ({
+const StyledTableRow = withStyles((theme) => ({ // попытка в цвета и стили
   root: {
       '&:nth-of-type(odd)': {
       backgroundColor: theme.palette.action.hover,
@@ -17,7 +17,12 @@ const StyledTableRow = withStyles((theme) => ({
 
 export default function EnhancedTableHead(props) {
   const { classes, order, orderBy, onRequestSort, headCells } = props;
+  // classes - стили
+  // order, orderBy сортировать по какому полю
+  // onRequestSort - функция-хэндлер для родительского компонента
 
+
+  // хэндлер для сортировки при нажатии на "стрелочку"
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };
@@ -25,7 +30,7 @@ export default function EnhancedTableHead(props) {
   return (
     <React.Fragment>
       <TableHead>
-        <StyledTableRow>
+        <TableRow>
           {headCells.map((headCell) => (
             <TableCell
               key={headCell.id}
@@ -47,7 +52,7 @@ export default function EnhancedTableHead(props) {
               </TableSortLabel>
             </TableCell>
           ))}
-        </StyledTableRow>
+        </TableRow>
       </TableHead>
     </React.Fragment>
   );

@@ -48,6 +48,7 @@ const Mint = gql`
   }
 `;
 
+// Массив для ячеек хэдера таблицы
 const headCells = [
   {id: "Empty", label: "", disablePadding: false},
   {id: "address", label: "Wallet address", disablePadding: false},

@@ -16,8 +16,8 @@ const useToolbarStyles = makeStyles((theme) => ({
 
 export default function EnhancedTableToolbar ({onChange}){
   const classes = useToolbarStyles();
-  const [date, setDate ] = React.useState(null);
-  const [amo, setAmo ] = React.useState(null);
+  const [date, setDate ] = React.useState(null); // стейты для выбора периода
+  const [amo, setAmo ] = React.useState(null);  //стейты для выбора минимальной суммы
   const [dateName, setDateName] = React.useState('1 month');
   const [amoName, setAmoName] = React.useState('1 M');
 

@@ -7,7 +7,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import AdditionalTable from './AdditionalTable';
+import AdditionalTable from './AdditionalTable'; // компонент таблицы, которая появляется при открытии ячейки
+import { threeCommas } from '../utils/Utils.js'; // функиця, которая преобразует float в число с запятыми после каждых 1000 $
 
 const useRowStyles = makeStyles({
   root: {
@@ -18,13 +19,13 @@ const useRowStyles = makeStyles({
 });
 
 export default function SmartRow(props) {
-  const {name, data, onChange, expanded} = props;
-  const [open, setOpen] = React.useState(true);
+  const {name, data, onChange, expanded} = props; // name - имя строки, data - объект данных, expanded - какая строка "открыта"
+  const [open, setOpen] = React.useState(true); 
   const classes = useRowStyles();
 
   const handleChange = (name, open) => {
     setOpen(!open);
-    onChange(open ? name : false);
+    onChange(open ? name : false); // onChange - функция для передачи данных в родительский компонент
   };
 
   return (
@@ -41,7 +42,7 @@ export default function SmartRow(props) {
           </a>
         </TableCell>
         <TableCell align="center">
-          {'$ '+data.totalAmount.toString().split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          {'$ '+ threeCommas(data.totalAmount)}
         </TableCell>
         <TableCell align="center">
           {data.data.length}
